@@ -1,5 +1,5 @@
 Bank Marketing Campaign : Assignment 
-
+< Note: A doc Readme file is added since the formatting seems to be lost on this doc> 
 
 Objective: 
 The objective is to determine if a client will subscribe to a long-term bank deposit product, leveraging insights from our telemarketing efforts
