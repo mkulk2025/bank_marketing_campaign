@@ -87,7 +87,9 @@ ROC & Precision-Recall Interpretation:
 |DecisionTree|0.254893|1.000000|0.894999|0.533475|0.540948|0.537186|0.740447|
 |SVM|61.403650|0.897329|0.897791|0.660448|0.190733|0.295987|0.935064|
 
-# LogisticRegression model performance metrics  (graph - please check the doc file attached for the graph)
+# LogisticRegression model performance metrics  
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/LogisticRegression%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 |Metric|Value|Interpretation|
 | :---        |  :---    |  :---  |
