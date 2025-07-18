@@ -157,7 +157,7 @@ ROC & Precision-Recall Interpretation:
 
 # Model Performance Summary (with SMOTE and GridSearchCV)
 |Model|Train Time (s)|Train Acc|Test Acc|Precision|Recall|F1 Score|AUC|Best Score|Best Params Summary|
-| :---        |  :---    |  :---  || :---        |  :---    |  :---  || :---        |  :---    |  :---  || :---        | 
+| :---        |  :---    |  :---  | :---        |  :---    |  :---  | :---        |  :---    |  :---  | :---        | 
 |LogisticRegression|11.32|0.86|0.87|0.46|0.91|0.61|0.94|0.59|C=10, solver=liblinear|
 |DecisionTree|39.41|0.87|0.86|0.45|0.87|0.59|0.93|0.59|max_depth=5, criterion=gini|
 |KNN|334.16|1.00|0.87|0.44|0.70|0.54|0.88|0.51|n_neighbors=19, metric=manhattan, weights=distance|
