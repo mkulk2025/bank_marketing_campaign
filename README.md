@@ -57,19 +57,8 @@ The shape of the violin will show distinct densities around the values represent
 The duration feature exhibits the ** strongest positive correlation** with the target, while nr.employed shows the strongest negative correlation.
 
 # Baseline Model Comparison
-| Metric | Value | Interpretation | 
-| :---        |  :----   |         :----  |
-|Train Accuracy|.80|While that appears plausible, it's more likely a result of class imbalance or how the predictions are inherently biased|
 
-
- 
-
-
- 
-
-
-===
-DummyClassifier as baseline model performance metrics 
+DummyClassifier as baseline model performance metrics  (graph - please check the doc file attached for the graph)
 Key Takeaways:
 | Metric | Value | Interpretation | 
 | :---        |  :---    |  :---  |
@@ -82,15 +71,11 @@ Key Takeaways:
 
 ROC & Precision-Recall Interpretation:
 - The  ROC curve for this model would appear nearly diagonal, which is characteristic of random guessing behavior.
-Model Comparisons
-Model
-Train Time
-Train Accuracy
-Test Accuracy
-Precision Score
-Recall Score
-F1 Score
-AUC
+  
+# Model Comparisons
+|Model|Train Time|Train Accuracy|Test Accuracy|Precision Score|Recall Score|F1 Score|AUC|
+| :---        |  :---    |  :---  | :---        |  :---    |  :---  | :---        |  :---    | 
+
 DummyClassifier
 0.106179
 0.800243
