@@ -1,15 +1,14 @@
-# Bank Marketing Campaign : Assignment 
-< Note: A doc Readme file is added since the formatting and the graphs seems to be lost on this doc> 
-
-Objective: 
-The objective is to determine if a client will subscribe to a long-term bank deposit product, leveraging insights from our telemarketing efforts
-Dataset used is from the UCI Machine Learning repository link  ( bank-additional-full.csv)
+# Bank Marketing Campaign
  
-Business Understanding
+# Objective: 
+The objective is to determine if a client will subscribe to a long-term bank deposit product, leveraging insights from our telemarketing efforts
+Dataset used is from the UCI Machine Learning repository [Link text]((https://archive.ics.uci.edu/ml/datasets/bank+marketing))  ( bank-additional-full.csv)
+ 
+# Business Understanding
 Companies promote products and services primarily through two approaches: mass campaigns aimed at the general public, or directed marketing that targets specific contacts. 
 The data for this analysis comes from a Portuguese bank's directed marketing campaigns, managed by their internal contact center
                      
-Data Understanding
+# Data Understanding
 Our dataset comprises 79,354 contacts from 17 phone campaigns conducted between May 2008 and November 2010. During these campaigns, clients were offered an attractive long-term deposit with favorable interest rates. For each contact, numerous attributes were recorded, along with whether the offer resulted in a subscription (our target variable). Overall, the campaigns achieved a success rate of 8%, with 6,499 successful subscriptions
 Data Preparation
 Following is the data set info at high level. 
@@ -26,7 +25,7 @@ May proved to be the most successful month for long-term deposit acceptance, ach
 Thursday and Monday were the most effective days for securing long-term deposit acceptances, with success rates of 20.94% and 20.67% respectively.
 
 
-Distribution by Target (Deposit) 
+#Distribution by Target (Deposit) 
 Key Outcome:
 The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
 Top 20 Features Correlation with Target (Deposit) 
