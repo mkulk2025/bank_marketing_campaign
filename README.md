@@ -90,64 +90,37 @@ ROC & Precision-Recall Interpretation:
 |Precision|0.71|The model shows a strong ability to avoid false positives, with 71% of its positive predictions proving accurate|
 |Recall|0.43|With a capture rate of just 43% for actual positives, the model fails to detect the majority of true instances|
 |F1-Score|0.54|This metric, the harmonic mean of precision and recall, suggests a moderately balanced performance|
-|AUC (ROC)
-|0.94
-|This classifier shows outstanding discriminatory power, indicating a robust overall performance|
+|AUC (ROC)|0.94|This classifier shows outstanding discriminatory power, indicating a robust overall performance|
 
 ROC & Precision-Recall Interpretation:
-The ROC curve for this model would exhibit strong convexity toward the top-left corner, signifying an excellent true positive rate coupled with a low false positive rate. Similarly, the Precision-Recall curve would show high precision maintained across moderate recall levels, characteristic of conservative classification
-DecisionTreeClassifier model performance metrics 
-Key Takeaways:
-Metric
-Value
-Interpretation
-Train Accuracy
-0.89
-While the model shows a good fit to the training data, some minor underfitting could be present..
-Test Accuracy
-1.00
-Achieving perfect accuracy on test data is highly suspicious and strongly suggests issues like data leakage or overfitting
-Precision
-0.53
-With moderate sensitivity, the model identifies slightly more than 50% of true positive instances
-Recall
-0.54
-With moderate sensitivity, the model identifies slightly more than 50% of true positive instances
-F1-Score
-0.54
-With moderate sensitivity, the model identifies slightly more than 50% of true positive instances
-AUC (ROC)
-0.74
-It shows some capacity to distinguish between classes, though its performance could be much better.
+- The ROC curve for this model would exhibit strong convexity toward the top-left corner, signifying an excellent true positive rate coupled with a low false positive rate. Similarly, the Precision-Recall curve would show high precision maintained across moderate recall levels, characteristic of conservative classification
+  
+# DecisionTreeClassifier model performance metrics (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+|Metric|Value|Interpretation|
+| :---        |  :---    |  :---  |
+|Train Accuracy|0.89|While the model shows a good fit to the training data, some minor underfitting could be present|
+|Test Accuracy|1.00|Achieving perfect accuracy on test data is highly suspicious and strongly suggests issues like data leakage or overfitting|
+|Precision|0.53|With moderate sensitivity, the model identifies slightly more than 50% of true positive instances|
+|Recall|0.54|With moderate sensitivity, the model identifies slightly more than 50% of true positive instances|
+|F1-Score|0.54|With moderate sensitivity, the model identifies slightly more than 50% of true positive instances|
+|AUC (ROC)|0.74|It shows some capacity to distinguish between classes, though its performance could be much better|
 
 ROC & Precision-Recall Interpretation:
-The ROC curve for this model would suggest moderate performance, illustrating a reasonable balance between sensitivity and specificity
-KNeighborsClassifier model performance metrics 
-Key Takeaways:
-Metric
-Value
-Interpretation
-Train Accuracy
-0.90
- With its strong fit to the training data, the model demonstrates low bias.
-Test Accuracy
-0.92
-The model achieves good generalization, reflected in its high overall accuracy  
-Precision
-0.60
-The model achieves 60% precision in its positive predictions, indicating a low rate of false positives
-Recall
-0.34
- It only identifies 34% of the real positive outcomes, indicating that it fails to detect many true cases
-F1-Score
-0.43
-While there's a reasonable trade-off between precision and recall, the results suggest the model's performance could be significantly enhanced
-AUC (ROC)
-0.83
-Highly effective at differentiating between classes.
+- The ROC curve for this model would suggest moderate performance, illustrating a reasonable balance between sensitivity and specificity
+
+# KNeighborsClassifier model performance metrics (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+|Metric|Value|Interpretation|
+|Train Accuracy|0.90| With its strong fit to the training data, the model demonstrates low bias|
+|Test Accuracy|0.92|The model achieves good generalization, reflected in its high overall accuracy |
+|Precision|0.60|The model achieves 60% precision in its positive predictions, indicating a low rate of false positives|
+|Recall|0.34| It only identifies 34% of the real positive outcomes, indicating that it fails to detect many true cases|F1-Score|
+|0.43|While there's a reasonable trade-off between precision and recall, the results suggest the model's performance could be significantly enhanced|
+|AUC (ROC)|0.83|Highly effective at differentiating between classes|
 
 ROC & Precision-Recall Interpretation:
-The  ROC curve for this model would demonstrate good performance, though it would be inferior to Logistic Regression. We'd expect to see a steeper slope in its middle regions.
+- The  ROC curve for this model would demonstrate good performance, though it would be inferior to Logistic Regression. We'd expect to see a steeper slope in its middle regions.
 Conversely, the Precision-Recall (PR) curve would display high precision at low recall levels, signifying the model's conservative approach when making positive predictions.
 
 
