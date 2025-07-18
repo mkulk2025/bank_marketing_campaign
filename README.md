@@ -19,6 +19,7 @@ Following is the data set info at high level.
   
 # Understanding Data via visualization
 #Distribution of Target (Deposit) by Category Features (Graph - please check the doc file attached for the graphs)
+
 ![](/https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/pie_chart_for_category_distribution.png)
 
 **Key Outcome:**
