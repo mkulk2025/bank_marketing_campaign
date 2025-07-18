@@ -57,14 +57,10 @@ The shape of the violin will show distinct densities around the values represent
 The duration feature exhibits the ** strongest positive correlation** with the target, while nr.employed shows the strongest negative correlation.
 
 # Baseline Model Comparison
+| Metric | Value | Interpretation | 
+ 
 
-Metric	Value	Interpretation
-Train Accuracy	0.80	While that appears plausible, it's more likely a result of class imbalance or how the predictions are inherently biased
-Test Accuracy	0.80	This result is deceptively high, a direct consequence of the model's bias toward the majority class
-Precision	0.12	With only 12% of predicted positives being correct, the model demonstrates weak predictive capability
-Recall	0.12	It only identifies 12% of the real positive outcomes, indicating that it fails to detect the vast majority of true cases
-F1-Score	0.12	With only 12% of predicted positives being correct, the model demonstrates weak predictive capability
-AUC (ROC)	0.51	The model effectively has no ability to distinguish between classes, performing only slightly above random chance
+
 ===
 DummyClassifier as baseline model performance metrics 
 Key Takeaways:
