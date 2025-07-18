@@ -180,105 +180,55 @@ ROC & Precision-Recall Interpretation:
 |AUC (ROC)|0.94|0.94|— No change|Excellent class discrimination remains intact|
 
 Optimization Impact:
-Incorporating SMOTE for handling class imbalance, StandardScaler for feature scaling, and L2 regularization (C=0.1) with a liblinear solver helped maintain the model's robust performance while likely enhancing its generalization capabilities. The minimal observed changes suggest that the original model was already performing near its optimal potential.
+- Incorporating SMOTE for handling class imbalance, StandardScaler for feature scaling, and L2 regularization (C=0.1) with a liblinear solver helped maintain the model's robust performance while likely enhancing its generalization capabilities. The minimal observed changes suggest that the original model was already performing near its optimal potential.
+
 ROC & Precision-Recall Curve Interpretation:
-Even with proper scaling, the model's performance holds strong: the ROC curve maintains its excellent convexity and near-identical shape, and the precision-recall curve continues to demonstrate consistently high precision. This remarkable stability suggests a resilient model architecture
-Improved DecisionTreeClassifier model performance metrics 
-Key Takeaways:
+- Even with proper scaling, the model's performance holds strong: the ROC curve maintains its excellent convexity and near-identical shape, and the precision-recall curve continues to demonstrate consistently high precision. This remarkable stability suggests a resilient model architecture
 
-
-The initial model clearly overfit the training data, exhibiting perfect test accuracy but lower performance on the training set. However, after applying SMOTE and hyperparameter tuning, the model is now significantly more balanced and effective at identifying instances of the minority class. This improvement is evident in the substantial gains in both recall and AUC.
+# Improved DecisionTreeClassifier model performance metrics   (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+- The initial model clearly overfit the training data, exhibiting perfect test accuracy but lower performance on the training set. However, after applying SMOTE and hyperparameter tuning, the model is now significantly more balanced and effective at identifying instances of the minority class. This improvement is evident in the substantial gains in both recall and AUC.
 While there was a modest drop in overall accuracy and precision, this is a worthwhile trade-off for achieving more reliable and equitable classification, particularly for the underrepresented class.
 
 
-Metric
-Before (Original)
-After (SMOTE + GridSearchCV)
-Change
-Interpretation
-Train Accuracy
-0.89
-0.86
-↓ -0.03
-Slight drop; indicates reduced overfitting and better generalization.
-Test Accuracy
-1.00
-0.87
-↓ -0.13
-Significant drop; more realistic performance after addressing class imbalance.
-Precision
-0.53
-0.45
-↓ -0.08
-Slightly more false positives; acceptable trade-off for higher recall.
-Recall
-0.54
-0.87
-↑ +0.33
-Major gain; model now captures most true positives.
-F1-Score
-0.54
-0.59
-↑ +0.05
-Improved balance between precision and recall.
-AUC (ROC)
-0.74
-0.93
-↑ +0.19
-Huge improvement in class separability and overall classifier quality.
+|Metric|Before (Original)|After (SMOTE + GridSearchCV)|Change|Interpretation|
+| :---        |  :---    |  :---  | :---        |  :---    |
+|Train Accuracy|0.89|0.86|↓ -0.03|Slight drop; indicates reduced overfitting and better generalization.|Test Accuracy|1.00|0.87|↓ -0.13|Significant drop; more realistic performance after addressing class imbalance|
+|Precision|0.53|0.45|↓ -0.08|Slightly more false positives; acceptable trade-off for higher recall|
+|Recall|0.54|0.87|↑ +0.33|Major gain; model now captures most true positives|
+|F1-Score|0.54|0.59|↑ +0.05|Improved balance between precision and recall|
+|AUC (ROC)|0.74|0.93|↑ +0.19|Huge improvement in class separability and overall classifier quality|
 
 Optimization Impact:
-The implementation of max_depth=5 and min_samples_leaf=4 successfully addressed overfitting while dramatically improving precision and AUC. This represents the most significant improvement among all models.
+- The implementation of max_depth=5 and min_samples_leaf=4 successfully addressed overfitting while dramatically improving precision and AUC. This represents the most significant improvement among all models.
+
 ROC & Precision-Recall Curve Interpretation:
-The ROC curve transformation would be dramatic, shifting from moderate performance to near-excellent with strong convexity. The precision-recall curve would show substantial improvement in precision maintenance across recall levels, indicating better decision boundary definition.
-Improved KNeighborsClassifier model performance metrics 
-Key Takeaways:
-Recall and F1-score improved substantially, making the model more effective in detecting minority class instances.
-Precision dropped, which is expected when recall increases, but the overall balance (F1-score) improved.
-AUC improvement confirms the model has become better at distinguishing classes.
-Test accuracy of 1.00 is suspicious and may require further validation (e.g., cross-validation or rechecking SMOTE data leakage).
-K-Nearest Neighbors (KNN)
-Metric
-Before (Original)
-After (SMOTE + GridSearchCV)
-Change
-Interpretation
-Train Accuracy
-0.90
-0.87
-↓ -0.03
-Slight drop; suggests better generalization and less overfitting.
-Test Accuracy
-0.92
-1.00
-↑ +0.08
-Unusually high; could indicate optimistic performance or overlap with SMOTE data.
-Precision
-0.60
-0.44
-↓ -0.16
-More false positives; expected with increased recall focus.
-Recall
-0.34
-0.70
-↑ +0.36
-Major improvement in capturing true positives.
-F1-Score
-0.43
-0.54
-↑ +0.11
-Much better balance of precision and recall.
-AUC (ROC)
-0.83
-0.88
-↑ +0.05
-Improved class discrimination and overall robustness.
+- The ROC curve transformation would be dramatic, shifting from moderate performance to near-excellent with strong convexity. The precision-recall curve would show substantial improvement in precision maintenance across recall levels, indicating better decision boundary definition.
+
+# Improved KNeighborsClassifier model performance metrics 
+**Key Outcome:**
+- Recall and F1-score improved substantially, making the model more effective in detecting minority class instances.
+- Precision dropped, which is expected when recall increases, but the overall balance (F1-score) improved.
+- AUC improvement confirms the model has become better at distinguishing classes.
+- Test accuracy of 1.00 is suspicious and may require further validation (e.g., cross-validation or rechecking SMOTE data leakage).
+
+# K-Nearest Neighbors (KNN)
+|Metric|Before (Original)|After (SMOTE + GridSearchCV)|Change|Interpretation|
+| :---        |  :---    |  :---  | :---        |  :---    |
+|Train Accuracy|0.90|0.87|↓ -0.03|Slight drop; suggests better generalization and less overfitting|
+|Test Accuracy|0.92|1.00|↑ +0.08|Unusually high; could indicate optimistic performance or overlap with SMOTE data|
+|Precision|0.60|0.44|↓ -0.16|More false positives; expected with increased recall focus|
+|Recall|0.34|0.70|↑ +0.36|Major improvement in capturing true positives|
+|F1-Score|0.43|0.54|↑ +0.11|Much better balance of precision and recall|
+|AUC (ROC)|0.83|0.88|↑ +0.05|Improved class discrimination and overall robustness|
 
 Optimization Impact:
-The use of n_neighbors=19 with distance weighting and euclidean metric improved precision and AUC but at the cost of recall. The perfect training accuracy suggests the model may be memorizing training data despite the larger neighborhood size.
+- The use of n_neighbors=19 with distance weighting and euclidean metric improved precision and AUC but at the cost of recall. The perfect training accuracy suggests the model may be memorizing training data despite the larger neighborhood size.
+
 ROC & Precision-Recall Curve Interpretation:
-The ROC curve would show improved performance with better true positive rates at lower false positive rates. However, the precision-recall curve would indicate a trade-off where high precision comes at the expense of recall, making the model more conservative.
-Improved Support Vectors Classifier model performance metrics 
+- The ROC curve would show improved performance with better true positive rates at lower false positive rates. However, the precision-recall curve would indicate a trade-off where high precision comes at the expense of recall, making the model more conservative.
+
+# Improved Support Vectors Classifier model performance metrics 
 Key Takeaways: The updated model represents a dramatic shift in strategy:
 The tuned SVC shows dramatic improvement in recall (from 0.19 to 0.92), making it highly effective at identifying minority class instances.
 Although precision and accuracy decreased, the F1-score nearly doubled, indicating a much more balanced and practical model.
