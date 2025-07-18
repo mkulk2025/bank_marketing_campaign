@@ -18,7 +18,7 @@ Following is the data set info at high level.
 - y column: Rename to Deposit.
   
 # Understanding Data via visualization
-#Distribution of Target (Deposit) by Category Features (Graph - please check the doc file attached for the graphs)
+#Distribution of Target (Deposit) by Category Features 
 
 ![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/pie_chart_for_category_distribution.png?raw=true)
 
@@ -28,16 +28,19 @@ Following is the data set info at high level.
 - Thursday and Monday were the most effective days for securing long-term deposit acceptances, with success rates of 20.94% and 20.67% respectively.
 
 
-# Distribution by Target (Deposit)  (Graph - please check the doc file attached for the graphs)
+# Distribution by Target (Deposit)  
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/class_distribution.png?raw=true)
 
 **Key Outcome:**
 - The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
 
-# Top 20 Features Correlation with Target (Deposit) (graph - please check the doc file attached for the graph)
+# Top 20 Features Correlation with Target (Deposit) 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/feature_correlation_with_deposit.png?raw=true)
 **Key Outcome:**
 - For predicting deposit, the most impactful features are duration, poutcome_success, contact_cellular, and the campaign months of March, September, and October due to their high correlation
 
-# Distribution comparision for top correlated features (Graph - please check the doc file attached for the graphs)
+# Distribution comparision for top correlated features 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/violin_chart_by_coef.png?raw=true)
 **Key Outcome:**
 - Violin Chart - Duration: This violin chart visualizes the distribution of the 'Duration' feature, representing the length of the last contact in seconds. The shape of the violin indicates data density, with wider sections signifying more contacts at those specific durations. We anticipate seeing a high concentration of shorter call durations, tapering off as the duration extends, suggesting that the majority of marketing calls were brief. Analyzing the violin's form will help us understand if the duration data is skewed, exhibits multiple peaks, or is generally symmetrical.
 - Violin Chart - Previous Contact Outcome (poutcome_success): This violin plot illustrates the distribution of the poutcome_success feature. This binary variable indicates whether a client's previous marketing campaign resulted in a success (represented as 1 after one-hot encoding), or an unsuccessful/non-existent outcome (represented as 0).
@@ -51,13 +54,17 @@ This plot helps us understand how frequently clients in our dataset were targete
 - Violin Chart - Contact Type (contact_cellular): This violin plot displays the distribution of the contact_cellular feature, indicating whether the last client contact occurred via cellular phone.
 The shape of the violin will show distinct densities around the values representing "cellular" contact (coded as 1) and "telephone" contact (coded as 0). The relative width of the violin at each of these values will directly illustrate the proportion of contacts made by cellular phone versus traditional telephone. A wider section at the "cellular" value, particularly when correlated with positive outcomes, would suggest that cellular contact was more frequent and effective in driving successful campaign results.
 
-# Top 20 Features Heatmap with Target (Deposit) (graph - please check the doc file attached for the graph)
+# Top 20 Features Heatmap with Target (Deposit)  
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/heatmap_top20_coef.png?raw=true)
+
 **Key Outcome:**
 The duration feature exhibits the ** strongest positive correlation** with the target, while nr.employed shows the strongest negative correlation.
 
 # Baseline Model Comparison
 
-# DummyClassifier as baseline model performance metrics  (graph - please check the doc file attached for the graph)
+# DummyClassifier as baseline model performance metrics  
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/DummyClassifier%20as%20baseline%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 | Metric | Value | Interpretation | 
 | :---        |  :---    |  :---  |
