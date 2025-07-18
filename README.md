@@ -229,68 +229,48 @@ ROC & Precision-Recall Curve Interpretation:
 - The ROC curve would show improved performance with better true positive rates at lower false positive rates. However, the precision-recall curve would indicate a trade-off where high precision comes at the expense of recall, making the model more conservative.
 
 # Improved Support Vectors Classifier model performance metrics 
-Key Takeaways: The updated model represents a dramatic shift in strategy:
-The tuned SVC shows dramatic improvement in recall (from 0.19 to 0.92), making it highly effective at identifying minority class instances.
-Although precision and accuracy decreased, the F1-score nearly doubled, indicating a much more balanced and practical model.
-The AUC remained strong, showing the model still separates classes well despite the shift in classification behavior.
-Support Vector Machine (SVM)
-Metric
-Before (Original)
-After (SMOTE + GridSearchCV)
-Change
-Interpretation
-Train Accuracy
-0.90
-0.86
-↓ -0.04
-Slight drop; improved generalization and reduced bias toward majority class.
-Test Accuracy
-0.90
-0.86
-↓ -0.04
-Slight reduction; expected when improving minority class performance.
-Precision
-0.66
-0.43
-↓ -0.23
-More false positives; typical trade-off for higher recall.
-Recall
-0.19
-0.92
-↑ +0.73
-Massive improvement in detecting actual positives.
-F1-Score
-0.30
-0.59
-↑ +0.29
-Much better balance between precision and recall.
-AUC (ROC)
-0.94
-0.94
-— No change
-Excellent class separation maintained.
+
+**Key Outcome:** The updated model represents a dramatic shift in strategy:
+- The tuned SVC shows dramatic improvement in recall (from 0.19 to 0.92), making it highly effective at identifying minority class instances.
+- Although precision and accuracy decreased, the F1-score nearly doubled, indicating a much more balanced and practical model.
+- The AUC remained strong, showing the model still separates classes well despite the shift in classification behavior.
+
+#Support Vector Machine (SVM)
+
+|Metric|Before (Original)|After (SMOTE + GridSearchCV)|Change|Interpretation|
+| :---        |  :---    |  :---  | :---        |  :---    |
+|Train Accuracy|0.90|0.86|↓ -0.04|Slight drop; improved generalization and reduced bias toward majority class|
+|Test Accuracy|0.90|0.86|↓ -0.04|Slight reduction; expected when improving minority class performance|
+|Precision|0.66|0.43|↓ -0.23|More false positives; typical trade-off for higher recall|
+|Recall|0.19|0.92|↑ +0.73|
+|Massive improvement in detecting actual positives.|F1-Score|0.30|0.59|↑ +0.29|Much better balance between precision and recall|
+|AUC (ROC)|0.94|0.94|— No change|Excellent class separation maintained|
 
 Optimization Impact:
-The implementation of class_weight='balanced' with linear kernel fundamentally changed the model's behavior from extremely conservative to highly sensitive. This addresses class imbalance but creates a precision-recall trade-off.
+- The implementation of class_weight='balanced' with linear kernel fundamentally changed the model's behavior from extremely conservative to highly sensitive. This addresses class imbalance but creates a precision-recall trade-off.
+
 ROC & Precision-Recall Curve Interpretation:
-The ROC curve would show improved sensitivity with some increase in false positive rate. The precision-recall curve would demonstrate a fundamental shift from high-precision/low-recall to low-precision/high-recall, making it suitable for scenarios where missing positive cases is more costly than false alarms.
+- The ROC curve would show improved sensitivity with some increase in false positive rate. The precision-recall curve would demonstrate a fundamental shift from high-precision/low-recall to low-precision/high-recall, making it suitable for scenarios where missing positive cases is more costly than false alarms.
+
 Comparative Improvement Summary
-Biggest Winners
-Decision Tree: Most comprehensive improvement across all metrics except recall
-SVM: Dramatic recall improvement (73.6 percentage points) with strategic trade-offs
-KNN: Solid improvements in precision and AUC with acceptable recall trade-off
-ROC vs Precision-Recall Context
-Given the class imbalance evident in the dataset, the precision-recall improvements are particularly significant. Decision Tree and KNN show better precision-recall balance, while SVM demonstrates the impact of addressing class imbalance directly.
-Next steps and Recommendations
+- Biggest Winners
+    - Decision Tree: Most comprehensive improvement across all metrics except recall
+    - SVM: Dramatic recall improvement (73.6 percentage points) with strategic trade-offs
+    - KNN: Solid improvements in precision and AUC with acceptable recall trade-off
+- ROC vs Precision-Recall Context
+    - Given the class imbalance evident in the dataset, the precision-recall improvements are particularly significant. Decision Tree and KNN show better precision-recall balance, while SVM demonstrates the impact of addressing class imbalance directly.
+
+# Next steps and Recommendations
 Based on analysis and model metrcis, we learned that imbalanced dataset which is heavily weighted towards the unsuccessful marketing campaigns could not be used effectively to determine features which could provide best model performance. So, it raises below questions:
 
-Was the marketing campaign not executed effectively to have a balanced dataset?
-There was a high score amongst the "Yes" for customers contacted via Cellular. So did Bank adopted other mode of customer reachout like text messages or Whatsapp messages?
-We observed high score for customer with longer duration of contact. Did bank employed sufficient resources to improve the changes of succesful outcome?
-Model Selection Based on Improvement
-For Balanced Performance: Decision Tree shows the most comprehensive improvement
-For High Recall Scenarios: Optimized SVM dramatically improves positive case detection
-For Consistent Reliability: Logistic Regression maintains excellent, stable performance
-For Precision-Focused Tasks: KNN improvements make it viable for low false-positive requirements
+- Was the marketing campaign not executed effectively to have a balanced dataset?
+- There was a high score amongst the "Yes" for customers contacted via Cellular. So did Bank adopted other mode of customer reachout like text messages or Whatsapp messages?
+- We observed high score for customer with longer duration of contact. Did bank employed sufficient resources to improve the changes of succesful outcome?
+
+ Model Selection Based on Improvement
+- For Balanced Performance: Decision Tree shows the most comprehensive improvement
+- For High Recall Scenarios: Optimized SVM dramatically improves positive case detection
+- For Consistent Reliability: Logistic Regression maintains excellent, stable performance
+- For Precision-Focused Tasks: KNN improvements make it viable for low false-positive requirements
 
 
