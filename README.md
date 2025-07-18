@@ -26,18 +26,19 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 - Thursday and Monday were the most effective days for securing long-term deposit acceptances, with success rates of 20.94% and 20.67% respectively.
 
 
-# Distribution by Target (Deposit)  ( graph - please check the doc file attached for the graph)
+# Distribution by Target (Deposit)  (graph - please check the doc file attached for the graph)
 
 **Key Outcome:**
-The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
+- The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
 
-# Top 20 Features Correlation with Target (Deposit) 
-Key Outcome:
-For predicting deposit, the most impactful features are duration, poutcome_success, contact_cellular, and the campaign months of March, September, and October due to their high correlation
-Distribution comparision for top correlated features 
-Key Takeaways:
-Violin Chart - Duration: This violin chart visualizes the distribution of the 'Duration' feature, representing the length of the last contact in seconds. The shape of the violin indicates data density, with wider sections signifying more contacts at those specific durations. We anticipate seeing a high concentration of shorter call durations, tapering off as the duration extends, suggesting that the majority of marketing calls were brief. Analyzing the violin's form will help us understand if the duration data is skewed, exhibits multiple peaks, or is generally symmetrical.
-Violin Chart - Previous Contact Outcome (poutcome_success): This violin plot illustrates the distribution of the poutcome_success feature. This binary variable indicates whether a client's previous marketing campaign resulted in a success (represented as 1 after one-hot encoding), or an unsuccessful/non-existent outcome (represented as 0).
+# Top 20 Features Correlation with Target (Deposit) (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+- For predicting deposit, the most impactful features are duration, poutcome_success, contact_cellular, and the campaign months of March, September, and October due to their high correlation
+
+# Distribution comparision for top correlated features (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+- Violin Chart - Duration: This violin chart visualizes the distribution of the 'Duration' feature, representing the length of the last contact in seconds. The shape of the violin indicates data density, with wider sections signifying more contacts at those specific durations. We anticipate seeing a high concentration of shorter call durations, tapering off as the duration extends, suggesting that the majority of marketing calls were brief. Analyzing the violin's form will help us understand if the duration data is skewed, exhibits multiple peaks, or is generally symmetrical.
+- Violin Chart - Previous Contact Outcome (poutcome_success): This violin plot illustrates the distribution of the poutcome_success feature. This binary variable indicates whether a client's previous marketing campaign resulted in a success (represented as 1 after one-hot encoding), or an unsuccessful/non-existent outcome (represented as 0).
 The shape of the violin will display distinct densities around these 0 and 1 values. Its width at any given point will directly reflect the proportion of clients with that specific previous outcome. For instance, a wider section around the 0 value would clearly show a higher frequency of unsuccessful prior outcomes in our dataset.
 
 
