@@ -41,16 +41,13 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 - Violin Chart - Previous Contact Outcome (poutcome_success): This violin plot illustrates the distribution of the poutcome_success feature. This binary variable indicates whether a client's previous marketing campaign resulted in a success (represented as 1 after one-hot encoding), or an unsuccessful/non-existent outcome (represented as 0).
 The shape of the violin will display distinct densities around these 0 and 1 values. Its width at any given point will directly reflect the proportion of clients with that specific previous outcome. For instance, a wider section around the 0 value would clearly show a higher frequency of unsuccessful prior outcomes in our dataset.
 
-
 - Violin Chart - Previous Number of Contacts Count (previous)
 This violin plot visualizes the distribution of the previous feature, which tracks the number of times a client was contacted prior to the current campaign.
 The shape of the violin will display the density of clients based on their past contact frequency. You'll likely observe a high concentration at a low number of previous contacts, with the density diminishing as that number grows.
 This plot helps us understand how frequently clients in our dataset were targeted in earlier campaigns. A significant density at lower values would suggest that many clients were either new to the current campaign or hadn't been contacted extensively before.
 
-
 - Violin Chart - Contact Type (contact_cellular): This violin plot displays the distribution of the contact_cellular feature, indicating whether the last client contact occurred via cellular phone.
 The shape of the violin will show distinct densities around the values representing "cellular" contact (coded as 1) and "telephone" contact (coded as 0). The relative width of the violin at each of these values will directly illustrate the proportion of contacts made by cellular phone versus traditional telephone. A wider section at the "cellular" value, particularly when correlated with positive outcomes, would suggest that cellular contact was more frequent and effective in driving successful campaign results.
-
 
 # Top 20 Features Heatmap with Target (Deposit) (graph - please check the doc file attached for the graph)
 **Key Outcome:**
@@ -111,7 +108,9 @@ ROC & Precision-Recall Interpretation:
 
 # KNeighborsClassifier model performance metrics (graph - please check the doc file attached for the graph)
 **Key Outcome:**
+
 |Metric|Value|Interpretation|
+| :---        |  :---    |  :---  |
 |Train Accuracy|0.90| With its strong fit to the training data, the model demonstrates low bias|
 |Test Accuracy|0.92|The model achieves good generalization, reflected in its high overall accuracy |
 |Precision|0.60|The model achieves 60% precision in its positive predictions, indicating a low rate of false positives|
@@ -124,38 +123,27 @@ ROC & Precision-Recall Interpretation:
 Conversely, the Precision-Recall (PR) curve would display high precision at low recall levels, signifying the model's conservative approach when making positive predictions.
 
 
-Support Vectors Classifier model performance metrics 
-Key Takeaways:
-Metric
-Value
-Interpretation
-Train Accuracy
-0.90
-The model demonstrates a strong performance on the training data, indicating that underfitting is not a concern.
-Test Accuracy
-0.90
-The model demonstrates strong overall performance on unseen data.
-Precision
-0.66
-The model boasts a 66% precision rate for positive predictions, meaning it generates few false positives
-Recall
-0.19
-It only identifies 19% of the real positive outcomes, indicating that it fails to detect the vast majority of true cases.
-F1-Score
-0.30
-The model shows a significant imbalance between precision and recall, implying it's ineffective at handling positive predictions.
-AUC (ROC)
-0.94
- The model has an exceptional capacity to distinguish between different categories
+# Support Vectors Classifier model performance metrics (graph - please check the doc file attached for the graph)
+**Key Outcome:**
 
-ROC & Precision-Recall Interpretation:
-The ROC curve for this model would demonstrate excellent performance, closely mirroring that of a Logistic Regression model with strong convexity. Meanwhile, the Precision-Recall curve would exhibit very high precision at extremely low recall levels, highlighting the model's highly conservative approach to classifying positive instances
-Key Insights and Recommendations
-Performance Trade-offs
-Logistic Regression offers the best balance of all metrics with superior AUC performance
-Decision Tree provides the highest recall but suffers from overfitting and lower precision
-SVM demonstrates excellent precision and AUC but severely limited recall capability
-KNN shows consistent performance but moderate results across all metrics
+|Metric|Value|Interpretation|
+| :---        |  :---    |  :---  |
+|Train Accuracy|0.90|The model demonstrates a strong performance on the training data, indicating that underfitting is not a concern|
+|Test Accuracy|0.90|The model demonstrates strong overall performance on unseen data|
+|Precision|0.66|The model boasts a 66% precision rate for positive predictions, meaning it generates few false positives|
+|Recall|0.19|It only identifies 19% of the real positive outcomes, indicating that it fails to detect the vast majority of true cases|
+|F1-Score|0.30|The model shows a significant imbalance between precision and recall, implying it's ineffective at handling positive predictions|
+|AUC (ROC)|0.94| The model has an exceptional capacity to distinguish between different categories|
+
+ROC & Precision-Recall Interpretation: 
+- The ROC curve for this model would demonstrate excellent performance, closely mirroring that of a Logistic Regression model with strong convexity. Meanwhile, the Precision-Recall curve would exhibit very high precision at extremely low recall levels, highlighting the model's highly conservative approach to classifying positive instances
+  
+# Key Insights and Recommendations
+- Performance Trade-offs
+- -Logistic Regression offers the best balance of all metrics with superior AUC performance
+- -Decision Tree provides the highest recall but suffers from overfitting and lower precision
+- -SVM demonstrates excellent precision and AUC but severely limited recall capability
+- - KNN shows consistent performance but moderate results across all metrics
 Business Context Considerations
 For high-precision requirements (minimizing false positives): SVM or Logistic Regression
 For high-recall requirements (capturing most positive cases): Decision Tree
