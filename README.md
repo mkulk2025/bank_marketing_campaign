@@ -163,48 +163,21 @@ ROC & Precision-Recall Interpretation:
 |KNN|334.16|1.00|0.87|0.44|0.70|0.54|0.88|0.51|n_neighbors=19, metric=manhattan, weights=distance|
 |SVM|4772.34|0.86|0.86|0.43|0.92|0.59|0.94|0.58|C=5, kernel=linear, class_weight=balanced|
 
-Improved LogisticRegression model performance metrics 
-Key Takeaways:
-Combining SMOTE with hyperparameter tuning significantly improved recall and delivered a modest gain in F1-score. This is especially important for imbalanced classification problems where correctly identifying minority class instances is crucial.
-Although precision and accuracy saw a decrease, the model's enhanced sensitivity to minority classes means it's now much better at catching those hard-to-find positive cases. This trade-off is often desirable when the cost of missing a true positive (a false negative) outweighs the cost of a false positive.
-Crucially, the Area Under the Curve (AUC) remained high, confirming that even after rebalancing and tuning, the model still maintains a strong ability to distinguish between the classes
+# Improved LogisticRegression model performance metrics  (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+- Combining SMOTE with hyperparameter tuning significantly improved recall and delivered a modest gain in F1-score. This is especially important for imbalanced classification problems where correctly identifying minority class instances is crucial.
+- Although precision and accuracy saw a decrease, the model's enhanced sensitivity to minority classes means it's now much better at catching those hard-to-find positive cases. This trade-off is often desirable when the cost of missing a true positive (a false negative) outweighs the cost of a false positive.
+- Crucially, the Area Under the Curve (AUC) remained high, confirming that even after rebalancing and tuning, the model still maintains a strong ability to distinguish between the classes
 
 
-Metric
-Before (Original)
-After (SMOTE + GridSearchCV)
-Change
-Interpretation
-Train Accuracy
-0.92
-0.87
-↓ -0.05
-Slight drop due to better generalization and class balance.
-Test Accuracy
-0.91
-0.86
-↓ -0.05
-Minor decrease; reflects reduced bias toward majority class.
-Precision
-0.71
-0.46
-↓ -0.25
-Lower precision; more false positives due to aggressive positive prediction.
-Recall
-0.43
-0.91
-↑ +0.48
-Major improvement; model now detects most true positives.
-F1-Score
-0.54
-0.61
-↑ +0.07
-Better balance between precision and recall.
-AUC (ROC)
-0.94
-0.94
-— No change
-Excellent class discrimination remains intact.
+|Metric|Before (Original)|After (SMOTE + GridSearchCV)|Change|Interpretation|
+| :---        |  :---    |  :---  | :---        |  :---    |
+|Train Accuracy|0.92|0.87|↓ -0.05|Slight drop due to better generalization and class balance|
+|Test Accuracy|0.91|0.86|↓ -0.05|Minor decrease; reflects reduced bias toward majority class|
+|Precision|0.71|0.46|↓ -0.25|Lower precision; more false positives due to aggressive positive prediction|
+|Recall|0.43|0.91|↑ +0.48|Major improvement; model now detects most true positives|
+|F1-Score|0.54|0.61|↑ +0.07|Better balance between precision and recall|
+|AUC (ROC)|0.94|0.94|— No change|Excellent class discrimination remains intact|
 
 Optimization Impact:
 Incorporating SMOTE for handling class imbalance, StandardScaler for feature scaling, and L2 regularization (C=0.1) with a liblinear solver helped maintain the model's robust performance while likely enhancing its generalization capabilities. The minimal observed changes suggest that the original model was already performing near its optimal potential.
