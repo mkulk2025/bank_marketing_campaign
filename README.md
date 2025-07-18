@@ -58,8 +58,8 @@ The duration feature exhibits the ** strongest positive correlation** with the t
 
 # Baseline Model Comparison
 
-DummyClassifier as baseline model performance metrics  (graph - please check the doc file attached for the graph)
-Key Takeaways:
+# DummyClassifier as baseline model performance metrics  (graph - please check the doc file attached for the graph)
+**Key Outcome:**
 | Metric | Value | Interpretation | 
 | :---        |  :---    |  :---  |
 |Train Accuracy|0.80|While that appears plausible, it's more likely a result of class imbalance or how the predictions are inherently biased|
@@ -81,29 +81,18 @@ ROC & Precision-Recall Interpretation:
 |DecisionTree|0.254893|1.000000|0.894999|0.533475|0.540948|0.537186|0.740447|
 |SVM|61.403650|0.897329|0.897791|0.660448|0.190733|0.295987|0.935064|
 
-LogisticRegression model performance metrics 
-Key Takeaways:
-Metric
-Value
-Interpretation
-Train Accuracy
-0.92
- The model demonstrates a good fit on the training data, suggesting little to no underfitting
-Test Accuracy
-0.91
-The model exhibits robust generalization capabilities, resulting in high overall correctness
-Precision
-0.71
-The model shows a strong ability to avoid false positives, with 71% of its positive predictions proving accurate
-Recall
-0.43
-With a capture rate of just 43% for actual positives, the model fails to detect the majority of true instances
-F1-Score
-0.54
-This metric, the harmonic mean of precision and recall, suggests a moderately balanced performance
-AUC (ROC)
-0.94
-This classifier shows outstanding discriminatory power, indicating a robust overall performance
+# LogisticRegression model performance metrics  (graph - please check the doc file attached for the graph)
+**Key Outcome:**
+|Metric|Value|Interpretation|
+| :---        |  :---    |  :---  |
+|Train Accuracy|0.92| The model demonstrates a good fit on the training data, suggesting little to no underfitting|
+|Test Accuracy|0.91|The model exhibits robust generalization capabilities, resulting in high overall correctness|
+|Precision|0.71|The model shows a strong ability to avoid false positives, with 71% of its positive predictions proving accurate|
+|Recall|0.43|With a capture rate of just 43% for actual positives, the model fails to detect the majority of true instances|
+|F1-Score|0.54|This metric, the harmonic mean of precision and recall, suggests a moderately balanced performance|
+|AUC (ROC)
+|0.94
+|This classifier shows outstanding discriminatory power, indicating a robust overall performance|
 
 ROC & Precision-Recall Interpretation:
 The ROC curve for this model would exhibit strong convexity toward the top-left corner, signifying an excellent true positive rate coupled with a low false positive rate. Similarly, the Precision-Recall curve would show high precision maintained across moderate recall levels, characteristic of conservative classification
