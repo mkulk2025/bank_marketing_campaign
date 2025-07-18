@@ -20,7 +20,7 @@ Following is the data set info at high level.
 # Understanding Data via visualization
 Distribution of Target (Deposit) by Category Features ( graph - please check the doc file attached for the graph)
 
-** Key Outcome: **
+**Key Outcome:**
 - Clients with a house loan showed a 52.38% acceptance rate for the long-term deposit, while those with a personal loan had an even higher acceptance rate of 82.43%.
 - May proved to be the most successful month for long-term deposit acceptance, achieving a 33.43% success rate.
 - Thursday and Monday were the most effective days for securing long-term deposit acceptances, with success rates of 20.94% and 20.67% respectively.
@@ -28,7 +28,7 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 
 # Distribution by Target (Deposit)  ( graph - please check the doc file attached for the graph)
 
-** Key Outcome: **
+**Key Outcome:**
 The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
 
 # Top 20 Features Correlation with Target (Deposit) 
