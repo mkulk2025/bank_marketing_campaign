@@ -141,68 +141,27 @@ ROC & Precision-Recall Interpretation:
 # Key Insights and Recommendations
 - Performance Trade-offs
    - Logistic Regression offers the best balance of all metrics with superior AUC performance
-- -Decision Tree provides the highest recall but suffers from overfitting and lower precision
-- -SVM demonstrates excellent precision and AUC but severely limited recall capability
-- - KNN shows consistent performance but moderate results across all metrics
-Business Context Considerations
-For high-precision requirements (minimizing false positives): SVM or Logistic Regression
-For high-recall requirements (capturing most positive cases): Decision Tree
-For balanced performance: Logistic Regression provides optimal trade-off
-For interpretability needs: Decision Tree offers clear decision pathways
-ROC vs Precision-Recall Curve Analysis
-Given the apparent class imbalance (high baseline accuracy), precision-recall curves would be more informative than ROC curves. Logistic Regression and SVM show superior performance in both contexts, while Decision Tree demonstrates better recall characteristics despite lower precision.
-Improving the Model
-Model Performance Summary (with SMOTE and GridSearchCV)
-Model
-Train Time (s)
-Train Acc
-Test Acc
-Precision
-Recall
-F1 Score
-AUC
-Best Score
-Best Params Summary
-LogisticRegression
-11.32
-0.86
-0.87
-0.46
-0.91
-0.61
-0.94
-0.59
-C=10, solver=liblinear
-DecisionTree
-39.41
-0.87
-0.86
-0.45
-0.87
-0.59
-0.93
-0.59
-max_depth=5, criterion=gini
-KNN
-334.16
-1.00
-0.87
-0.44
-0.70
-0.54
-0.88
-0.51
-n_neighbors=19, metric=manhattan, weights=distance
-SVM
-4772.34
-0.86
-0.86
-0.43
-0.92
-0.59
-0.94
-0.58
-C=5, kernel=linear, class_weight=balanced
+   - Decision Tree provides the highest recall but suffers from overfitting and lower precision
+   - SVM demonstrates excellent precision and AUC but severely limited recall capability
+   - KNN shows consistent performance but moderate results across all metrics
+- Business Context Considerations
+    - For high-precision requirements (minimizing false positives): SVM or Logistic Regression
+    - For high-recall requirements (capturing most positive cases): Decision Tree
+    - For balanced performance: Logistic Regression provides optimal trade-off
+    - For interpretability needs: Decision Tree offers clear decision pathways
+
+- ROC vs Precision-Recall Curve Analysis
+    - Given the apparent class imbalance (high baseline accuracy), precision-recall curves would be more informative than ROC curves. Logistic Regression and SVM show superior performance in both contexts, while Decision Tree demonstrates better recall characteristics despite lower precision.
+
+# **Improving the Model**
+
+# Model Performance Summary (with SMOTE and GridSearchCV)
+|Model|Train Time (s)|Train Acc|Test Acc|Precision|Recall|F1 Score|AUC|Best Score|Best Params Summary|
+| :---        |  :---    |  :---  || :---        |  :---    |  :---  || :---        |  :---    |  :---  || :---        | 
+|LogisticRegression|11.32|0.86|0.87|0.46|0.91|0.61|0.94|0.59|C=10, solver=liblinear|
+|DecisionTree|39.41|0.87|0.86|0.45|0.87|0.59|0.93|0.59|max_depth=5, criterion=gini|
+|KNN|334.16|1.00|0.87|0.44|0.70|0.54|0.88|0.51|n_neighbors=19, metric=manhattan, weights=distance|
+|SVM|4772.34|0.86|0.86|0.43|0.92|0.59|0.94|0.58|C=5, kernel=linear, class_weight=balanced|
 
 Improved LogisticRegression model performance metrics 
 Key Takeaways:
