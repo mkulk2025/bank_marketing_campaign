@@ -2,7 +2,7 @@
  
 # Objective: 
 The objective is to determine if a client will subscribe to a long-term bank deposit product, leveraging insights from our telemarketing efforts
-Dataset used is from the UCI Machine Learning repository [Link](https://archive.ics.uci.edu/ml/datasets/bank+marketing)  ( bank-additional-full.csv)
+Dataset used is from the UCI Machine Learning repository [Link](https://archive.ics.uci.edu/ml/datasets/bank+marketing)  ( Dataset name: bank-additional-full.csv)
  
 # Business Understanding
 Companies promote products and services primarily through two approaches: mass campaigns aimed at the general public, or directed marketing that targets specific contacts. 
@@ -10,9 +10,10 @@ The data for this analysis comes from a Portuguese bank's directed marketing cam
                      
 # Data Understanding
 Our dataset comprises 79,354 contacts from 17 phone campaigns conducted between May 2008 and November 2010. During these campaigns, clients were offered an attractive long-term deposit with favorable interest rates. For each contact, numerous attributes were recorded, along with whether the offer resulted in a subscription (our target variable). Overall, the campaigns achieved a success rate of 8%, with 6,499 successful subscriptions
-Data Preparation
+
+# Data Preparation
 Following is the data set info at high level. 
-Dataset size is 41188 X 21.
+- Dataset size is 41188 X 21.
 There were no missing values.
 y column: Rename to Deposit.
 Understanding Data via visualization
