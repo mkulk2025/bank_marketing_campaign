@@ -2,7 +2,7 @@
  
 # Objective: 
 The objective is to determine if a client will subscribe to a long-term bank deposit product, leveraging insights from our telemarketing efforts
-Dataset used is from the UCI Machine Learning repository [Link text]((https://archive.ics.uci.edu/ml/datasets/bank+marketing))  ( bank-additional-full.csv)
+Dataset used is from the UCI Machine Learning repository [Link](https://archive.ics.uci.edu/ml/datasets/bank+marketing)  ( bank-additional-full.csv)
  
 # Business Understanding
 Companies promote products and services primarily through two approaches: mass campaigns aimed at the general public, or directed marketing that targets specific contacts. 
