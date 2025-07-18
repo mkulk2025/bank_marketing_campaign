@@ -19,6 +19,7 @@ Following is the data set info at high level.
   
 # Understanding Data via visualization
 #Distribution of Target (Deposit) by Category Features (Graph - please check the doc file attached for the graphs)
+![](/https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/pie_chart_for_category_distribution.png)
 
 **Key Outcome:**
 - Clients with a house loan showed a 52.38% acceptance rate for the long-term deposit, while those with a personal loan had an even higher acceptance rate of 82.43%.
