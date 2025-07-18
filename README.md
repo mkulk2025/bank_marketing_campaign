@@ -42,20 +42,30 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 The shape of the violin will display distinct densities around these 0 and 1 values. Its width at any given point will directly reflect the proportion of clients with that specific previous outcome. For instance, a wider section around the 0 value would clearly show a higher frequency of unsuccessful prior outcomes in our dataset.
 
 
-Violin Chart - Previous Number of Contacts Count (previous)
+- Violin Chart - Previous Number of Contacts Count (previous)
 This violin plot visualizes the distribution of the previous feature, which tracks the number of times a client was contacted prior to the current campaign.
 The shape of the violin will display the density of clients based on their past contact frequency. You'll likely observe a high concentration at a low number of previous contacts, with the density diminishing as that number grows.
 This plot helps us understand how frequently clients in our dataset were targeted in earlier campaigns. A significant density at lower values would suggest that many clients were either new to the current campaign or hadn't been contacted extensively before.
 
 
-Violin Chart - Contact Type (contact_cellular): This violin plot displays the distribution of the contact_cellular feature, indicating whether the last client contact occurred via cellular phone.
+- Violin Chart - Contact Type (contact_cellular): This violin plot displays the distribution of the contact_cellular feature, indicating whether the last client contact occurred via cellular phone.
 The shape of the violin will show distinct densities around the values representing "cellular" contact (coded as 1) and "telephone" contact (coded as 0). The relative width of the violin at each of these values will directly illustrate the proportion of contacts made by cellular phone versus traditional telephone. A wider section at the "cellular" value, particularly when correlated with positive outcomes, would suggest that cellular contact was more frequent and effective in driving successful campaign results.
 
 
-Top 20 Features Heatmap with Target (Deposit) 
-Key Outcome:
+# Top 20 Features Heatmap with Target (Deposit) (graph - please check the doc file attached for the graph)
+**Key Outcome:**
 The duration feature exhibits the ** strongest positive correlation** with the target, while nr.employed shows the strongest negative correlation.
-Baseline Model Comparison
+
+# Baseline Model Comparison
+
+Metric	Value	Interpretation
+Train Accuracy	0.80	While that appears plausible, it's more likely a result of class imbalance or how the predictions are inherently biased
+Test Accuracy	0.80	This result is deceptively high, a direct consequence of the model's bias toward the majority class
+Precision	0.12	With only 12% of predicted positives being correct, the model demonstrates weak predictive capability
+Recall	0.12	It only identifies 12% of the real positive outcomes, indicating that it fails to detect the vast majority of true cases
+F1-Score	0.12	With only 12% of predicted positives being correct, the model demonstrates weak predictive capability
+AUC (ROC)	0.51	The model effectively has no ability to distinguish between classes, performing only slightly above random chance
+===
 DummyClassifier as baseline model performance metrics 
 Key Takeaways:
 Metric
