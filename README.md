@@ -18,7 +18,7 @@ Following is the data set info at high level.
 - y column: Rename to Deposit.
   
 # Understanding Data via visualization
-Distribution of Target (Deposit) by Category Features ( graph - please check the doc file attached for the graph)
+#Distribution of Target (Deposit) by Category Features (Graph - please check the doc file attached for the graphs)
 
 **Key Outcome:**
 - Clients with a house loan showed a 52.38% acceptance rate for the long-term deposit, while those with a personal loan had an even higher acceptance rate of 82.43%.
@@ -26,7 +26,7 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 - Thursday and Monday were the most effective days for securing long-term deposit acceptances, with success rates of 20.94% and 20.67% respectively.
 
 
-# Distribution by Target (Deposit)  (graph - please check the doc file attached for the graph)
+# Distribution by Target (Deposit)  (Graph - please check the doc file attached for the graphs)
 
 **Key Outcome:**
 - The data reveals a pronounced class imbalance within the campaign outcomes, with roughly 36,548 instances of unsuccessful deposit acceptance versus only about 4,640 positive outcomes.
@@ -35,7 +35,7 @@ Distribution of Target (Deposit) by Category Features ( graph - please check the
 **Key Outcome:**
 - For predicting deposit, the most impactful features are duration, poutcome_success, contact_cellular, and the campaign months of March, September, and October due to their high correlation
 
-# Distribution comparision for top correlated features (graph - please check the doc file attached for the graph)
+# Distribution comparision for top correlated features (Graph - please check the doc file attached for the graphs)
 **Key Outcome:**
 - Violin Chart - Duration: This violin chart visualizes the distribution of the 'Duration' feature, representing the length of the last contact in seconds. The shape of the violin indicates data density, with wider sections signifying more contacts at those specific durations. We anticipate seeing a high concentration of shorter call durations, tapering off as the duration extends, suggesting that the majority of marketing calls were brief. Analyzing the violin's form will help us understand if the duration data is skewed, exhibits multiple peaks, or is generally symmetrical.
 - Violin Chart - Previous Contact Outcome (poutcome_success): This violin plot illustrates the distribution of the poutcome_success feature. This binary variable indicates whether a client's previous marketing campaign resulted in a success (represented as 1 after one-hot encoding), or an unsuccessful/non-existent outcome (represented as 0).
