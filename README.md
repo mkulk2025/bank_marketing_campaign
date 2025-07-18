@@ -1,4 +1,4 @@
-#Bank Marketing Campaign : Assignment 
+# Bank Marketing Campaign : Assignment 
 < Note: A doc Readme file is added since the formatting and the graphs seems to be lost on this doc> 
 
 Objective: 
