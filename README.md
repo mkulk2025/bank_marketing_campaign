@@ -140,7 +140,7 @@ ROC & Precision-Recall Interpretation:
   
 # Key Insights and Recommendations
 - Performance Trade-offs
-- -Logistic Regression offers the best balance of all metrics with superior AUC performance
+    Logistic Regression offers the best balance of all metrics with superior AUC performance
 - -Decision Tree provides the highest recall but suffers from overfitting and lower precision
 - -SVM demonstrates excellent precision and AUC but severely limited recall capability
 - - KNN shows consistent performance but moderate results across all metrics
