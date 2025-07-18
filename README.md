@@ -180,7 +180,9 @@ ROC & Precision-Recall Interpretation:
 |KNN|334.16|1.00|0.87|0.44|0.70|0.54|0.88|0.51|n_neighbors=19, metric=manhattan, weights=distance|
 |SVM|4772.34|0.86|0.86|0.43|0.92|0.59|0.94|0.58|C=5, kernel=linear, class_weight=balanced|
 
-# Improved LogisticRegression model performance metrics  (graph - please check the doc file attached for the graph)
+# Improved LogisticRegression model performance metrics 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/Improved%20LogisticRegression%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 - Combining SMOTE with hyperparameter tuning significantly improved recall and delivered a modest gain in F1-score. This is especially important for imbalanced classification problems where correctly identifying minority class instances is crucial.
 - Although precision and accuracy saw a decrease, the model's enhanced sensitivity to minority classes means it's now much better at catching those hard-to-find positive cases. This trade-off is often desirable when the cost of missing a true positive (a false negative) outweighs the cost of a false positive.
@@ -202,7 +204,9 @@ Optimization Impact:
 ROC & Precision-Recall Curve Interpretation:
 - Even with proper scaling, the model's performance holds strong: the ROC curve maintains its excellent convexity and near-identical shape, and the precision-recall curve continues to demonstrate consistently high precision. This remarkable stability suggests a resilient model architecture
 
-# Improved DecisionTreeClassifier model performance metrics   (graph - please check the doc file attached for the graph)
+# Improved DecisionTreeClassifier model performance metrics   
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/Improved%20DecisionTreeClassifier%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 - The initial model clearly overfit the training data, exhibiting perfect test accuracy but lower performance on the training set. However, after applying SMOTE and hyperparameter tuning, the model is now significantly more balanced and effective at identifying instances of the minority class. This improvement is evident in the substantial gains in both recall and AUC.
 While there was a modest drop in overall accuracy and precision, this is a worthwhile trade-off for achieving more reliable and equitable classification, particularly for the underrepresented class.
@@ -223,6 +227,8 @@ ROC & Precision-Recall Curve Interpretation:
 - The ROC curve transformation would be dramatic, shifting from moderate performance to near-excellent with strong convexity. The precision-recall curve would show substantial improvement in precision maintenance across recall levels, indicating better decision boundary definition.
 
 # Improved KNeighborsClassifier model performance metrics 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/Improved%20KNeighborsClassifier%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 - Recall and F1-score improved substantially, making the model more effective in detecting minority class instances.
 - Precision dropped, which is expected when recall increases, but the overall balance (F1-score) improved.
@@ -246,6 +252,7 @@ ROC & Precision-Recall Curve Interpretation:
 - The ROC curve would show improved performance with better true positive rates at lower false positive rates. However, the precision-recall curve would indicate a trade-off where high precision comes at the expense of recall, making the model more conservative.
 
 # Improved Support Vectors Classifier model performance metrics 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/Support%20Vectors%20Classifier%20model%20performance%20metrics.png?raw=true)
 
 **Key Outcome:** The updated model represents a dramatic shift in strategy:
 - The tuned SVC shows dramatic improvement in recall (from 0.19 to 0.92), making it highly effective at identifying minority class instances.
