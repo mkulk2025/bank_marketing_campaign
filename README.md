@@ -103,7 +103,9 @@ ROC & Precision-Recall Interpretation:
 ROC & Precision-Recall Interpretation:
 - The ROC curve for this model would exhibit strong convexity toward the top-left corner, signifying an excellent true positive rate coupled with a low false positive rate. Similarly, the Precision-Recall curve would show high precision maintained across moderate recall levels, characteristic of conservative classification
   
-# DecisionTreeClassifier model performance metrics (graph - please check the doc file attached for the graph)
+# DecisionTreeClassifier model performance metrics  
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/DecisionTreeClassifier%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 |Metric|Value|Interpretation|
 | :---        |  :---    |  :---  |
@@ -117,7 +119,9 @@ ROC & Precision-Recall Interpretation:
 ROC & Precision-Recall Interpretation:
 - The ROC curve for this model would suggest moderate performance, illustrating a reasonable balance between sensitivity and specificity
 
-# KNeighborsClassifier model performance metrics (graph - please check the doc file attached for the graph)
+# KNeighborsClassifier model performance metrics 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/KNeighborsClassifier%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 
 |Metric|Value|Interpretation|
@@ -134,7 +138,9 @@ ROC & Precision-Recall Interpretation:
 Conversely, the Precision-Recall (PR) curve would display high precision at low recall levels, signifying the model's conservative approach when making positive predictions.
 
 
-# Support Vectors Classifier model performance metrics (graph - please check the doc file attached for the graph)
+# Support Vectors Classifier model performance metrics 
+![](https://github.com/mkulk2025/bank_marketing_campaign/blob/main/output/Support%20Vectors%20Classifier%20model%20performance%20metrics.png?raw=true)
+
 **Key Outcome:**
 
 |Metric|Value|Interpretation|
