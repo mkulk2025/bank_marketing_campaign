@@ -59,6 +59,9 @@ The duration feature exhibits the ** strongest positive correlation** with the t
 # Baseline Model Comparison
 | Metric | Value | Interpretation | 
 | :---        |  :----   |         :----  |
+|Train Accuracy|.80|While that appears plausible, it's more likely a result of class imbalance or how the predictions are inherently biased|
+
+
  
 
 
